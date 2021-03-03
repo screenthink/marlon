@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
 import styled, { css } from "styled-components"
 
@@ -46,30 +47,35 @@ const paragraphStyles = {
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Marlon
-        <span style={headingAccentStyles}>Works</span>
-      </h1>
+    <>
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <title>Marlon Works</title>
+        <meta name="description" content="Gabsty & Contentful test site for Marlon Lulgjuraj" />
+      </Helmet>
+      <main style={pageStyles}>
+        <h1 style={headingStyles}>
+          Marlon
+          <span style={headingAccentStyles}>Works</span>
+        </h1>
 
-      <H2 red>A blob</H2>
+        <H2 red>A blob</H2>
 
-      <Hero>
-        <StaticImage
-          src="../images/blob.jpg"
-          alt="A blob"
-          placeholder="blurred"
-          transformOptions={{ grayscale: false }}
-          width={1600}
-        />
-      </Hero>
+        <Hero>
+          <StaticImage
+            src="../images/blob.jpg"
+            alt="A blob"
+            placeholder="blurred"
+            transformOptions={{ grayscale: false }}
+            width={1600}
+          />
+        </Hero>
 
-      <p style={paragraphStyles}>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.</p>
+        <p style={paragraphStyles}>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum.</p>
 
-      <p style={paragraphStyles}>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        <p style={paragraphStyles}>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
-    </main>
+      </main>
+    </>
   )
 }
 
