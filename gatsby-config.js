@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "Marlon",
+    description: "Gatsby Contentful",
+    author: "Marlon Lulgjuraj",
+    siteUrl: "https://marlongatsbycontentful.gatsbyjs.io",
   },
   plugins: [
     {
